@@ -1,0 +1,145 @@
+/*RESET*/
+/*
+
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+header .logo{
+    max-width: 280px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.redsuit{
+    background-image: url("./img/traje_rojo.png");
+    background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.description{
+    font-family: "Montserrat", "Helvetica", "sans-serif";
+    font-size: 1.5rem; 
+    color: grey; 
+    font-weight: normal;
+    padding: 1rem 0px;
+}
+
+.name{
+    color: #fe0000;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.work{
+    position: relative;
+	font-size: 3rem;
+	font-family: "Poppins", "Helvetica", "sans-serif";
+	text-transform: uppercase;
+	font-weight: 900;
+	color: #fe0000;
+	line-height: 1.2;
+	overflow:hidden;
+}
+
+.counter {
+    font-family: "Montserrat", "Helvetica", "sans-serif";
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fe0000;
+    display: inline-block;
+    text-align: center;
+    transform: scale(1);
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.button{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+    padding: 2rem 0px;
+}
+.button a{
+	text-decoration: none;
+	color: #fff;
+	background-color: #fe0000;
+	display: inline-block;
+	padding: 13px 48px;
+	font-family: "Poppins";
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+
+.button a:hover{
+	color: #fe0000;
+	background-color: transparent;
+    border: 1px solid #fe0000;
+    border-style: inset;
+}

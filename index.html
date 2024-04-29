@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMADOR - CREATIVE COMMUNICATION</title>
+</head>
+<body>
+    <main>
+        <section class="intro">
+            <article>
+                    <div class="description">Hi! I'm <span class="name">José Amador</span> and I know what's on your mind...<br>and no, I don't have a red suit.<br>What I do have is expertise in:</div>
+                    <div class="work"><h3>Web Dev & Design</h3></div>
+                    <div class="work"><h3>E-commerce Managment</h3></div>
+                    <div class="work"><h3>Digital Communication</h3></div>
+                    <div class="description">My new portfolio will be online in:</div>
+                    <div class="counter-section">
+                        <div class="counter" id="init_clock">
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="days"></div>
+                                <div class="countdown-label">Days</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="hours"></div>
+                                <div class="countdown-label">Hours</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="minutes"></div>
+                                <div class="countdown-label">Minutes</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="seconds"></div>
+                                <div class="countdown-label">Seconds</div>
+                            </div>
+                        </div>
+                     </div>
+                    <div class="button">
+                        <a href="mailto:joseamadorg1982@gmail.com?subject=Hello&body=Hi%20there,">
+                            Send me an Email!
+                        </a>
+                    </div>
+            </article>
+        </section>
+        <section class="redsuit"></section>
+    </main>
+    <script>
+        function updateClock(endTime) {
+            var total = Date.parse(endTime) - Date.parse(new Date());
+            var seconds = Math.floor((total / 1000) % 60);
+            var minutes = Math.floor((total / 1000 / 60) % 60);
+            var hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+            var days = Math.floor(total / (1000 * 60 * 60 * 24));
+        
+            document.getElementById('days').innerHTML = days;
+            document.getElementById('hours').innerHTML = ('0' + hours).slice(-2);
+            document.getElementById('minutes').innerHTML = ('0' + minutes).slice(-2);
+            document.getElementById('seconds').innerHTML = ('0' + seconds).slice(-2);
+        
+            if (total <= 0) {
+                clearInterval(timeInterval);
+            }
+        }
+        
+        var timeInterval = setInterval(function() {
+            updateClock('2024/05/10');
+        }, 1000);
+        
+        updateClock('2024/05/15');
+        </script>
+</body>
+</html>
