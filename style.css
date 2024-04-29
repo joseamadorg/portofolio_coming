@@ -116,10 +116,7 @@ main{
 }
 
 .button{
-	width: 100%;
 	height: auto;
-	clear: both;
-	float: left;
     padding: 2rem 0px;
 }
 .button a{
@@ -129,6 +126,7 @@ main{
 	display: inline-block;
 	padding: 13px 48px;
 	font-family: "Poppins";
+    margin-right: 1rem;
 	
 	-webkit-transition: all .3s ease;
 	   -moz-transition: all .3s ease;
@@ -142,4 +140,9 @@ main{
 	background-color: transparent;
     border: 1px solid #fe0000;
     border-style: inset;
+}
+
+
+.flex{
+    display: flex;
 }
